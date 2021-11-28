@@ -18,6 +18,13 @@ app.get("/",(req,res) => {
 const hr = require('./routes/hr')
 app.use('/hr',hr)
 
+const candidate = require('./routes/candidate')
+app.use('/cand',candidate)
+
+app.post('/hrlogin',(req,res) => {
+    res.send("Heyy")
+})
+
 // app.get("/hr/login",(req,res) => {
 //     res.sendFile('./view/Hr/Hr_login.html',{root: __dirname })
 // })
@@ -27,3 +34,7 @@ app.use('/hr',hr)
 // })
 
 app.listen(3000);
+
+
+// home pg post for cand and hr
+// cand profile jobs applied 

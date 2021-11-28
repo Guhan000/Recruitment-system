@@ -9,8 +9,7 @@ const postSchema = mongoose.Schema({
     },
     skills_required:{
         type:String,
-        required:true,
-        unique:true
+        required:true
     },
     description:{
         type:String,
