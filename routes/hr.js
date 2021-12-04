@@ -11,8 +11,10 @@ router.get('/login',(req,res) => {
     res.sendFile(path.resolve(__dirname,"../view/Hr/Hr_login.html"))
 })
 
-router.get('/hr-home',(req,res) => {
+router.get('/hr-home',async (req,res) => {
     res.sendFile(path.resolve(__dirname,"../view/Hr/Hr_home.html"))
+
+    
 })
 
 router.get("/compose",(req,res) => {
@@ -66,12 +68,15 @@ router.post('/hrlogin',async (req,res) => {
     
     try{
         let hr = await Hr.findOne({email})
-        console.log("Loggedd");
         if(!hr){
             return res.status(400).json({errors : errors.array()})
         }
         if(password == hr.password){
             res.sendFile(path.resolve(__dirname,"../view/Hr/Hr_home.html"))
+            console.log("Loggedd");
+        }
+        else{
+            res.sendFile(path.resolve(__dirname,"../view/Error.html"))
         }
     }
     catch(err){

@@ -12,6 +12,10 @@ router.get('/candreg',(req,res) => {
     res.sendFile(path.resolve(__dirname,'../view/Candidate/cand_reg.html'))
 })
 
+router.get('/jobApplied',(req,res) => {
+    res.sendFile(path.resolve(__dirname,'../view/Candidate/job_applied.html'))
+})
+
 router.post('/candreg',async (req,res) => {
     const {name,email,age,password} = req.body
 
@@ -43,6 +47,9 @@ router.post('/candlogin',async (req,res) => {
         }
         if(password == cand.password){
             res.sendFile(path.resolve(__dirname,"../view/Candidate/cand_home.html"))
+        }
+        else{
+            res.sendFile(path.resolve(__dirname,"../view/Error.html"))
         }
     } catch (error) {
         

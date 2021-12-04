@@ -1,5 +1,9 @@
 const express = require('express')
 const app = express()
+const path = require('path')
+// const ejs = require('ejs')
+
+const Posts = require('./models/JobAnnouncement')
 
 // app.use(express.static("public"));
 
@@ -8,11 +12,14 @@ const app = express()
 
 app.use(express.urlencoded({ extended: true }))
 
+// app.set('view engine','ejs')
+
 const db = require('./config/db')
 db();
 
 app.get("/",(req,res) => {
     res.sendFile('./view/Landing_page.html',{root: __dirname })
+
 })
 
 const hr = require('./routes/hr')
@@ -33,7 +40,7 @@ app.post('/hrlogin',(req,res) => {
 //     res.sendFile('./view/Hr/Job-Compose.html',{root: __dirname })
 // })
 
-app.listen(3000);
+app.listen(8000);
 
 
 // home pg post for cand and hr

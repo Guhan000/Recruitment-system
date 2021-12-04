@@ -4,13 +4,188 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cand-Home</title>
+    <title>Applicant Home</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,600&display=swap" rel="stylesheet">
+
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ 
+
+    <style>
+        .left {
+	float: left;
+	text-align: right;
+}
+
+.heading-card {
+	font-size: 1rem;
+	position: absolute;
+}
+
+.card-header {
+	position: relative;
+}
+
+.time-card {
+	/* margin-left: 650px;
+	font-size: 0.8rem; */
+	float: right;
+}
+.btn-left {
+	float: right;
+}
+
+/* card css */
+.card {
+	margin: 0.5rem;
+	transition: all ease 0.2s;
+	box-shadow: 2px 2px 2px black;
+}
+
+.card:hover {
+	transform: scale(1.01);
+}
+
+input {
+	margin-top: 80px;
+	width: 200px;
+}
+
+.footer {
+	background-color: dimgrey;
+	text-align: center;
+	margin-bottom: 0;
+	width: 100%;
+	padding: 1px;
+}
+
+    </style>
+
+
 </head>
 <body>
-    <h1>cand Home</h1>
-    <br>
-    <br>
-    <br>
-    <h2>list of jobs</h2>
+    
+
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">#Recruitment System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav left">
+            <li class="nav-item active left">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active left">
+              <a class="nav-link" href="/cand/jobApplied">Jobs Applied<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Edit Profile</a>
+                  <a class="dropdown-item" href="#">Pending Application</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/cand/candlogin">Logout</a>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- popular jobs -->
+      <div class="row">
+          <div class="col-8">
+            <h1 class="heading">Trending Jobs Now</h1>
+            <!-- card for each  jobs -->
+            <div class="card">
+                <div class="card-header">
+                  <div class="heading-card">
+                      Jerone,IBM Tech
+                  </div>
+                  <div class="time-card">
+                      posted Today,8.00am
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Web Developer</h5>
+                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                      Lorem Ipsum has been the industry's standard dummy</p>
+                  <a href="#" class="btn btn-primary btn-left">Apply</a>
+                </div>
+              </div>
+
+              <!-- card duplicate -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="heading-card">
+                      Jerone,IBM Tech
+                  </div>
+                  <div class="time-card">
+                      posted Today,8.00am
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Web Developer</h5>
+                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                      Lorem Ipsum has been the industry's standard dummy</p>
+                  <a href="#" class="btn btn-primary btn-left">Apply</a>
+                </div>
+              </div>
+
+              <!-- card duplicate -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="heading-card">
+                      Jerone,IBM Tech
+                  </div>
+                  <div class="time-card">
+                      posted Today,8.00am
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Web Developer</h5>
+                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                      Lorem Ipsum has been the industry's standard dummy</p>
+                  <a href="#" class="btn btn-primary btn-left">Apply</a>
+                </div>
+              </div>
+
+              <!-- card duplicate -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="heading-card">
+                      Jerone,IBM Tech
+                  </div>
+                  <div class="time-card">
+                      posted Today,8.00am
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Web Developer</h5>
+                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                      Lorem Ipsum has been the industry's standard dummy</p>
+                  <a href="#" class="btn btn-primary btn-left">Apply</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-4">
+            <input type="text" name="search" placeholder="search">
+          </div>
+      </div>
+
+
 </body>
 </html>
