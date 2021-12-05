@@ -5,7 +5,7 @@ const path = require('path')
 
 const Posts = require('./models/JobAnnouncement')
 
-// app.use(express.static("public"));
+app.use(express.static("public"));
 
 // app.use(express.json())
 // app.use(express.urlencoded());
